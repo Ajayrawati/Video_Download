@@ -12,12 +12,18 @@ header h1 {
     margin: 0;
 }
 .container {
+    
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
 }
+
 .input-section {
     margin: 20px 0;
+    height: 45px;
 }
 .input-section input {
     padding: 10px;
@@ -25,9 +31,11 @@ header h1 {
     border: none;
     border-radius: 5px;
     margin-right: 10px;
+    height: 28px;
 }
 .input-section button {
     padding: 10px 20px;
+    height: 100%;
     border: none;
     border-radius: 5px;
     background-color: #e63946;
@@ -38,13 +46,21 @@ header h1 {
     background-color: #fff;
     color: #000;
     padding: 20px;
+    /* border-radius: 10px; */
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.Grey-white {
+    background-color: #716e6e6f;
+    color: #000;
+    padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .white-section h2, .white-section h3, .white-section p, .white-section ul, .white-section ol {
     text-align: left;
-    margin: 0 auto;
+    margin: 10px auto;
     max-width: 700px;
 }
 .supported-platforms {
