@@ -18,6 +18,7 @@ header h1 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
 
 }
 
@@ -51,13 +52,23 @@ header h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .Grey-white {
-    background-color: #716e6e6f;
+    background-color: #fff;
     color: #000;
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid black;
+    font-family: 'Gilroy';
 }
+
+.Grey-white h3,p,ul,ol{
+    font-family: 'Gilroy';
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
 .white-section h2, .white-section h3, .white-section p, .white-section ul, .white-section ol {
     text-align: left;
     margin: 10px auto;
@@ -65,7 +76,17 @@ header h1 {
 }
 .supported-platforms {
     margin-top: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
 }
+
+.supported-platforms h3{
+    font-family: 'Gilroy';
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
 .platform-icons {
     display: flex;
     justify-content: center;
@@ -73,9 +94,17 @@ header h1 {
     margin: 20px 0;
 }
 .platform-icons img {
-    width: 50px;
-    height: 50px;
+    height: 100px;
+    width: 50%;
 }
+
+.supported-platforms ul{
+    padding: 20px 10px;
+    font-size: 20px;
+    font-family: 'Gilroy';
+    font-weight: 500;
+}
+
 footer {
     margin-top: 20px;
     font-size: 14px;
