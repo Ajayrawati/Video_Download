@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+
     const inputField = document.querySelector("input");
     const downloadButton = document.querySelector("button");
 
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (formatsResponse.ok) {
                 const formats = formatsData.formats;
                 const formatList = formats.map(f => `${f.format_id} - ${f.format_note} (${f.ext})`).join('\n');
-                const selectedFormat = prompt("Available formats:\n" + formatList + "\n\nEnter the format code to download:");
+                const selectedFormat = alert("Available formats:\n" + formatList + "\n\nEnter the format code to download:");
 
                 if (selectedFormat) {
                     const savePath = prompt("Enter the save path (e.g., video.mp4):", "video.mp4");
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("An error occurred. Please try again.");
         }
     });
-});
+
 
 function isValidURL(url) {
     const youtubeRegex = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/.+$/;
