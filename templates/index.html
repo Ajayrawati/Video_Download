@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SSYouTube Video Downloader</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link rel="stylesheet" href="back.js" />
+  </head>
+  <body>
+    <header>
+      <h1>VSDownload</h1>
+    </header>
+    <div class="container">
+      <h2>YouTube Video Downloader</h2>
+
+      <div class="input-section">
+        <form action="/download" method="post">
+            <input 
+                type="text" 
+                name="video_url" 
+                class="cover_input" 
+                placeholder="Paste your video link here" 
+                required>
+            <button type="submit" class="cover_input">Download</button>
+        </form>
+        
+      </div>
+    </div>
+    
+    <div class="white-section">
+      <!-- White Section -->
+      <div class="Grey-white">
+        <h2>About Us:</h2>
+        <h3>Welcome to VS--YouTube – Your Ultimate Video Downloader!</h3>
+        <p>
+          Unlock endless possibilities with our powerful video downloader tool.
+          Designed to simplify your online video downloading experience, our
+          platform enables you to download your favorite videos from popular
+          websites in just a few clicks.
+        </p>
+
+        <h2>Why Choose Us?</h2>
+        <ul>
+          <li>
+            <strong>Fast and Reliable:</strong> Experience high-speed downloads
+            without interruptions.
+          </li>
+          <li>
+            <strong>Easy to Use:</strong> Simply paste the video URL, hit
+            "Download," and let us handle the rest!
+          </li>
+          <li>
+            <strong>Wide Compatibility:</strong> Works seamlessly on Windows,
+            macOS, Android, and Linux devices.
+          </li>
+          <li>
+            <strong>High-Quality Downloads:</strong> Download videos in multiple
+            formats and resolutions, including HD and 4K.
+          </li>
+        </ul>
+
+        <h3>How It Works:</h3>
+        <ol>
+          <li>Copy the video URL from the website you wish to download.</li>
+          <li>Paste it into the input field above.</li>
+          <li>Click "Download" and choose your desired format and quality.</li>
+        </ol>
+
+        <p>
+          Our tool is safe, secure, and completely free to use. No ads, no
+          subscriptions—just effortless video downloading for everyone.
+        </p>
+      </div>
+
+      <div class="supported-platforms">
+        <h3>Supported Platforms:</h3>
+        <div class="platform-icons">
+          <img
+            src="{{ url_for('static', filename='assets/windows.svg') }}"
+            alt="Windows"
+          />
+          <img
+            src="{{ url_for('static', filename='assets/apple.svg') }}"
+            alt="Apple"
+          />
+          <img
+            src="{{ url_for('static', filename='assets/android.svg') }}"
+            alt="Android"
+          />
+          <img
+            src="{{ url_for('static', filename='assets/linux.svg') }}"
+            alt="Linux"
+          />
+        </div>
+        <ul>
+          <li>
+            Enjoy unlimited free video downloads with our top-rated YouTube
+            downloader
+          </li>
+          <li>
+            Select from multiple high-quality formats: MP4, MP3, SD, HD, Full HD
+          </li>
+          <li>
+            Simplify your download experience: Works seamlessly on both desktop
+            and mobile devices
+          </li>
+          <li>
+            Enhance your YouTube video downloads with our user-friendly online
+            platform
+          </li>
+          <li>
+            Experience fast download speeds and unlimited access to a wide range
+            of YouTube videos at no cost
+          </li>
+          <li>
+            Stay informed: Explore our comprehensive guide to learn advanced
+            video downloading techniques
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer>
+      <p>Install extension: <strong>SaveFrom.net Helper</strong></p>
+    </footer>
+  </body>
+</html>
