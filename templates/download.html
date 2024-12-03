@@ -6,6 +6,44 @@
     <title>SSYouTube Video Downloader</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="back.js">
+<style>
+    /* Submit Button for the Form */
+.cover_input[type="submit"] {
+    width: 100%; /* Full width of the container */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    font-size: 1.1em;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    box-sizing: border-box; /* Ensures the width and padding are handled properly */
+}
+
+.cover_input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Button inside Download Section */
+.download-material a {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 12px 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.download-material a:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+</style>
 </head>
 <body>
     <header>
@@ -20,7 +58,13 @@
               name="vedio_url"
               class="cover_input"
               placeholder="Paste your video link here" />
-              <button type="submit" class="cover_input">Download</button>
+              <button type="submit" class="cover" style="padding: 10px 20px;
+              height: 100%;
+              border: none;
+              border-radius: 5px;
+              background-color: #e63946;
+              color: #fff;
+              cursor: pointer;">Download</button>
             </form>
           </div>
           
@@ -30,6 +74,16 @@
           <div class="thumbnail">
             <img src="{{thumbnail}}" alt="thumbnail" class="thumbnail">
           </div>
+          <h2>Available Formats:</h2>
+          <ul>
+            {% for fmt in formats %}
+            <li>
+                <a href="{{ fmt['url'] }}" target="_blank" download>
+                    Download <span class="format-label">{{ fmt['format_name_label'] }}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
     </div>
     
     
@@ -81,4 +135,6 @@
         <p>Install extension: <strong>SaveFrom.net Helper</strong></p>
     </footer>
 </body>
+<script src="{{ url_for('static', filename='js/back.js') }}"></script>
+
 </html>
