@@ -1,23 +1,20 @@
 from yt_dlp import YoutubeDL
 
-# Function to list available formats
 def list_formats(url):
     options = {
-        'listformats': True,  # Show all available formats
+        'listformats': True,  
     }
     with YoutubeDL(options) as ydl:
         ydl.download([url])
 
-# Function to download video
 def download_video(url, format_code, save_path):
     options = {
-        'format': format_code,  # User-selected format
-        'outtmpl': save_path    # Save location
+        'format': format_code,  
+        'outtmpl': save_path  
     }
     with YoutubeDL(options) as ydl:
         ydl.download([url])
 
-# Example usage:
 video_url = input("Enter the video URL: ")
 if video_url:
     print("Fetching available formats...")
